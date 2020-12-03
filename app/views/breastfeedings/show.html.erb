@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md offset-md-1">
+    <p id="notice"><%= notice %></p>
+    <p>
+      <strong>Volume:</strong>
+      <%= @breastfeeding.volume %>
+    </p>
+    <p>
+      <strong>Minutes:</strong>
+      <%= @breastfeeding.minutes %>
+    </p>
+    <p>
+      <strong>Baby:</strong>
+      <%= @breastfeeding.baby_id %>
+    </p>
+    <%= link_to 'Edit', edit_breastfeeding_path(@breastfeeding) %> |
+    <%= link_to 'Back', breastfeedings_path %>
+  </div>
+</div>

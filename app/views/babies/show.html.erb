@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md offset-md-1">
+    <p id="notice"><%= notice %></p>
+    <h1><%= @baby.name %></h1>
+    <p>
+      <strong>Gener:</strong>
+      <%= @baby.gener %>
+    </p>
+    <p>
+      <strong>Cantidad Diaria:</strong>
+      <%= @baby.daily_quantity %>
+    </p>
+    <p>
+      <strong>Ultima Tomada  :</strong>
+      <%= @baby.last_breast %>
+    </p>
+    <p>
+      <strong>Volumen Diario:</strong>
+      <%= @baby.daily_volumne %>
+    </p>
+    <p>
+      <strong>Minutos diarios:</strong>
+      <%= @baby.daily_minutes %>
+    </p>
+
+    <%= link_to 'Edit', edit_baby_path(@baby) %> |
+    <%= link_to 'Back', babies_path %>
+  </div>
+</div>

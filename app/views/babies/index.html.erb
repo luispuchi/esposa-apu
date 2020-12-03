@@ -1,0 +1,35 @@
+<div class="row-4">
+  <div class="col-md offset-md-12">
+   <div class="jumbotron">
+    <p id="notice"><%= notice %></p>
+    <h1>Bebés</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Género</th>
+          <th>Total Tomado</th>
+          <th>Total Volumen</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @babies.each do |baby| %>
+          <tr>
+            <td><%= baby.name %></td>
+            <td><%= baby.gener %></td> 
+            <td><%= baby.total_q %></td>
+            <td><%= baby.total_taked %></td>
+            <td><%= link_to 'Show', baby %></td>
+            <td><%= link_to 'Edit', edit_baby_path(baby) %></td>
+            <td><%= link_to 'Destroy', baby, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <br>
+    <%= link_to 'Nuevo Bebé', new_baby_path, class:"btn btn-success" %>
+    <%= link_to 'Lactancias', root_path, class:"btn btn-warning" %>
+     </div>
+  </div>
+</div>
